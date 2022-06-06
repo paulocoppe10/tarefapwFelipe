@@ -1,0 +1,65 @@
+Microsoft Windows [versão 10.0.19043.1466]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\Aluno>cd ../..
+
+C:\>cd wamp64
+
+
+
+C:\wamp64>cd www
+
+
+
+C:\wamp64\www>git clone https://github.com/paulocoppe10/pw3combanco.git
+Cloning into 'pw3combanco'...
+remote: Enumerating objects: 871, done.
+remote: Counting objects: 100% (871/871), done.
+remote: Compressing objects: 100% (599/599), done.
+remote: Total 871 (delta 228), reused 862 (delta 219), pack-reused 0Receiving objects:  98% (854/871), 1.23 MiB | 156.00Receiving objects:  99% (863/871), 1.23 MiB | 156.00 KiB/s
+Receiving objects: 100% (871/871), 1.24 MiB | 129.00 KiB/s, done.
+Resolving deltas: 100% (228/228), done.
+
+
+
+C:\wamp64\www>cd pw3combanco
+
+
+
+
+C:\wamp64\www\pw3combanco>code .
+
+
+
+(inicia o projeto para velo no navegador)
+C:\wamp64\www\pw3combanco>php spark serve
+
+CodeIgniter v4.1.8 Command Line Tool - Server Time: 2022-03-30 11:57:52 UTC-05:00
+
+CodeIgniter development server started on http://localhost:8080
+Press Control-C to stop.
+[Wed Mar 30 13:57:52 2022] PHP 7.4.26 Development Server (http://localhost:8080) started
+^C
+
+
+
+
+
+(cria tabelas no bd)
+C:\wamp64\www\pw3combanco>php spark migrate
+
+CodeIgniter v4.1.8 Command Line Tool - Server Time: 2022-03-30 12:02:58 UTC-05:00
+
+Running all new migrations...
+        Running: (App) 2022-03-23-175247_App\Database\Migrations\Pessoas
+Done migrations.
+
+
+
+
+(envia dados ao bd)
+C:\wamp64\www\pw3combanco>php spark db:seed Pessoas
+
+CodeIgniter v4.1.8 Command Line Tool - Server Time: 2022-03-30 12:32:29 UTC-05:00
+
+Seeded: App\Database\Seeds\Pessoas

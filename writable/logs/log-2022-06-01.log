@@ -1,0 +1,16 @@
+CRITICAL - 2022-06-01 12:46:27 --> Use of undefined constant data - assumed 'data' (this will throw an Error in a future version of PHP)
+#0 C:\wamp64\www\pw3combanco\app\Controllers\Home.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\wamp64\\www\\p...', 82, Array)
+#1 C:\wamp64\www\pw3combanco\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\wamp64\www\pw3combanco\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\wamp64\www\pw3combanco\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\pw3combanco\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\pw3combanco\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2022-06-01 12:48:49 --> Use of undefined constant data - assumed 'data' (this will throw an Error in a future version of PHP)
+#0 C:\wamp64\www\pw3combanco\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\wamp64\\www\\p...', 88, Array)
+#1 C:\wamp64\www\pw3combanco\system\CodeIgniter.php(825): App\Controllers\Home->logar()
+#2 C:\wamp64\www\pw3combanco\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\wamp64\www\pw3combanco\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\pw3combanco\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\pw3combanco\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
