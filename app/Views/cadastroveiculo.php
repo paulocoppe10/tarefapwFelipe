@@ -1,4 +1,4 @@
-    <div class="row">
+<div class="row">
         <div class="col">
             <h2>Cadastro de Pessoas</h2>
         </div>
@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label for="">Nome: </label>
-                    <input type="text" class="form-control" name="nome"
-                    value="<?= isset($pessoa['nome']) ? $pessoa['nome'] : "" ?>">
+                    <label for="">modelo: </label>
+                    <input type="text" class="form-control" name="modelo"
+                    value="<?= isset($veiculo['modelo']) ? $veiculo['modelo'] : "" ?>">
                 </div>
             </div>
         </div>
@@ -18,21 +18,21 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label for="">Profissão: </label>
-                    <input type="text" class="form-control" name="profissao"
-                    value="<?= isset($pessoa['profissao']) ? $pessoa['profissao'] : "" ?>">
+                    <label for="">marca: </label>
+                    <input type="text" class="form-control" name="marca"
+                    value="<?= isset($veiculo['marca']) ? $veiculo['marca'] : "" ?>">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="">Idade: </label>
-                    <input type="text" class="form-control" name="idade"
-                    value="<?= isset($pessoa['idade']) ? $pessoa['idade'] : "" ?>">
+                    <label for="">ano: </label>
+                    <input type="text" class="form-control" name="ano"
+                    value="<?= isset($veiculo['ano']) ? $veiculo['ano'] : "" ?>">
                 </div>
             </div>
         </div>
         <input type="hidden" name="id"
-        value="<?= isset($pessoa['id']) ? $pessoa['id'] : "" ?>">
+        value="<?= isset($veiculo['id']) ? $veiculo['id'] : "" ?>">
         <div class="row">
             <div class="col-6">
                 <div class="d-grid gap-2">
