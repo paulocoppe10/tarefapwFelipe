@@ -1,94 +1,70 @@
 <?php
 
 namespace App\Controllers;
-
-use App\Models\PessoasModel;
+use App\Models\VeiculoModel;
 
 class Home extends BaseController
 {
-
     public function index()
     {
         echo view('template/header');
-        echo view('home');
+        echo view('principal');        
         echo view('template/footer');
     }
 
-    public function page($page='home'){
+    public function page($page='principal'){
         echo view('template/header');
-        echo view($page);
-        echo view('template/footer');
+        echo view($page);        
+        echo view('template/footer');   
     }
 
-    public function pessoas(){
-        $model = new PessoasModel();
-
+    public function veiculo(){
+        $model = new VeiculoModel();
 
         $data = [
-            'title'=>'Pessoas',
-            'pessoas'=>$model->getPessoas()
+            'title'     =>  'Veículos',
+            'veiculo'   =>  $model->getVeiculos(),
         ];
 
         echo view('template/header');
-        echo view('pessoa',$data);
+        echo view('veiculo', $data);
         echo view('template/footer');
     }
 
     public function cadastro(){
         echo view('template/header');
-        echo view('cadastro-pessoas');
+        echo view('cadastroveiculo');
         echo view('template/footer');
     }
-
     public function gravar(){
-        $model = new PessoasModel();
+        $model = new VeiculoModel();
 
         $model->save([
             'id' => $this->request->getVar('id'),
-            'nome' => $this->request->getVar('nome'),
-            'profissao' => $this->request->getVar('profissao'),
-            'idade' => $this->request->getVar('idade')
+            'modelo' => $this->request->getVar('modelo'),
+            'marca' => $this->request->getVar('marca'),
+            'ano' => $this->request->getVar('ano')
         ]);
 
-        return redirect('pessoa');
+        return redirect('veiculo');
     }
 
     public function excluir($id = null){
-        $model = new PessoasModel();
+        $model = new VeiculoModel();
         $model->delete($id);
-        return redirect("pessoa");
+        return redirect("veiculo");
     }
 
     public function editar($id = null){
-        $model = new PessoasModel();
+        $model = new VeiculoModel();
 
         $data = [
-            'pessoa' => $model->getPessoa($id)
+            'veiculo' => $model->getVeiculo($id)
         ];
 
         echo view('template/header');
-        echo view('cadastro-pessoas',$data);
+        echo view('cadastroveiculo',$data);
         echo view('template/footer');
     }
 
-    public function login(){
-        echo view('template/header');
-        echo view('login');
-        echo view('template/footer');
-    }
-
-    public function logar(){
-        $model = new PessoasModel();
-
-        $senha = $this->request->getVar("senha");
-        $nome = $this->request->getVar("nome");
-
-        $data['usuario'] = $model->userLogin($nome, $senha);
-
-        if(empty($data['usuario'])){
-            return redirect("login");
-        }else{
-            return redirect("pessoa");
-        }
-    }
 }
